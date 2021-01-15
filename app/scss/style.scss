@@ -3,4 +3,66 @@
 @import 'reset';
 @import 'global';
 
+
+.header {
+  padding: 48px 0 45px;
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    margin-left: 35px;
+  }
+  &__list-link {
+    @extend %rubik-500;
+    color: $second;
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: none;
+    &--active{
+      padding-right: 12px;
+      position: relative;
+      &::after{
+        content: '+';
+        position: absolute;
+        top: -3px;
+        right: 0;
+      }
+    }
+  }
+}
+.user-nav {
+  display: flex;
+  align-items: center;
+  &__btn {
+  }
+  &__icon {
+  }
+  &__box {
+  }
+  &__link {
+  }
+  &__nums {
+  }
+  &__icon--btn {
+  }
+  &__icon--position {
+  }
+}
+
+
+
+
+
+
+
+
+
 @import 'media';

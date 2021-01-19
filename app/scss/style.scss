@@ -1,7 +1,9 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
+
 
 
 .header {
@@ -55,7 +57,7 @@
   &__btn {
     width: 50px;
     height: 50px;
-    background-color: #a3bbc8;
+    background-color: $icon-grey;
     border-radius: 50%;
     position: relative;
     &--search{
@@ -129,6 +131,89 @@
 
 
 
+.slider-top{
+  background-color: $bg-light;
+  padding: 220px 0 280px;
+  &__item{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  &__title{
+    @extend %rubik-500;
+    color: $primary;
+    font-size: 72px;
+    line-height: 82px;
+    max-width: 420px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @extend %rubik-400;
+    color: $second;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 360px;
+    margin-bottom: 35px;
+  }
+  &__link{
+    @extend %rubik-500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 21px;
+    text-decoration: none;
+    padding: 20px 100px 20px 25px;
+    background-color: $icon-grey;
+    display: inline-block;
+    position: relative;
+    &::after{
+      content: '';
+      background-image: url(../images/icons/arrow_right_icon.svg);
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+  &__img{
+    width: 640px;
+    height: 100%;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -210px;
+    left: 0;
+    right: 0;
+    li + li{
+      margin-left: 10px;
+    }
+    li{
+      button{
+        border: none;
+        padding: 0;
+        outline: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, .3);
+        border-radius: 50%;
+        @extend %rubik-500;
+        color: $primary;
+        font-size: 11px;
+        line-height: 15px;
+      }
+      &.slick-active{
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
 
 
 
@@ -155,7 +240,7 @@
     @extend %rubik-400;
     color: $default-grey;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     text-decoration: none;
     margin-bottom: 15px;
   }
@@ -173,7 +258,7 @@
   justify-content: space-between;
   border-bottom: 1px solid rgba(163, 187, 200, .4);;
   &__block{
-    width: 115px;
+    width: 120px;
   }
   &__title{
     @extend %dmsans-700;

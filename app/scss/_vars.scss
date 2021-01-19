@@ -1,5 +1,7 @@
 $primary: #243f4d;
 $second: #436372;
+$default-grey: #7b7b7b;
+$bg: rgba(252, 215, 182, .2);
 
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
@@ -28,4 +30,11 @@ $second: #436372;
 %dmsans-700{
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
+}
+
+%footer-hover{
+  transition: opacity .2s;
+  &:hover{
+    opacity: 0.7;
+  }
 }

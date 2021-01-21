@@ -21,3 +21,39 @@ main{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.filter{
+  text-align: center;
+  &__title{
+    @extend %dmsans-700;
+    color: #191919;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 30px;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  &__btn{
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .2s;
+    & + .filter__btn{
+      margin-left: 30px;
+    }
+    &:hover{
+      color: #1a1a1a;
+    }
+    &.mixitup-control-active{
+      color: #1a1a1a;
+    }
+  }
+}

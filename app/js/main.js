@@ -8,4 +8,8 @@ $(function(){
     autoplaySpeed: 4000,
   });
 
+  var mixer = mixitup('.products-week__wrapper', {
+
+  });
+
 });

@@ -262,6 +262,98 @@
 
 
 
+.products{
+  padding: 70px 0 30px;
+}
+.products-week{
+  &__filter{
+    margin-bottom: 80px;
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &__item{
+    width: 270px;
+    max-width: 100%;
+    height: 380px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    margin: 0 10px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover .products-week__buttons{
+      opacity: 1;
+    }
+  }
+  &__img{
+    display: inline-block;
+    margin-bottom: 70px;
+  }
+  &__content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+  }
+  &__title{
+    @extend %dmsans-500;
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  &__cost{
+    @extend %dmsans-700;
+    color: $icon-grey;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__buttons{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% + 30px);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  &__btn{
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color .2s;
+    & + .products-week__btn{
+      margin-left: 16px;
+    }
+    &:hover{
+      background-color: $icon-grey;
+    }
+    &:hover .products-week__icon{
+      fill: #fff;
+    }
+  }
+  &__icon{
+    fill: $icon-grey;
+    transition: fill .2s;
+  }
+}
+
+
+
 
 
 

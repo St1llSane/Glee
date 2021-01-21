@@ -34,6 +34,13 @@ $icon-grey: #a3bbc8;
   font-weight: 700;
 }
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
 %link{
   @extend %rubik-500;
   font-size: 15px;

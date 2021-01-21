@@ -335,6 +335,9 @@
     &:hover .products-week__icon{
       fill: #fff;
     }
+    &:active{
+      transform: scale(0.9);
+    }
     &.active{
       background-color: $icon-grey;
       opacity: 1;
@@ -407,6 +410,41 @@
   }
 }
 
+
+
+.video{
+  background-image: url(../images/video/video_bg.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom 21%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper{
+    width: 127px;
+    height: 127px;
+    background-color: rgba(163, 187, 200, .4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__inner{
+    width: 98px;
+    height: 98px;
+    background-color: $icon-grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    &:hover{
+      width: 105px;
+      height: 105px;
+    }
+  }
+}
 
 
 

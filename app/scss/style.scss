@@ -217,6 +217,50 @@
 
 
 
+.services{
+  padding: 45px 0;
+  background-color: $bg;
+  overflow: hidden;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:not(:last-child)::after{
+      content: '';
+      width: 1px;
+      height: calc(100% + 120px);
+      background-color: #243f4d;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: calc(-50% + 1px);
+      opacity: 0.1;
+    }
+  }
+  &__img{
+    margin-right: 25px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    color: #414141;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+  &__text{
+    @extend %dmsans-400;
+    color: #585858;
+    line-height: 26px;
+    max-width: 220px;
+  }
+}
+
+
 
 
 

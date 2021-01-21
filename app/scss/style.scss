@@ -157,25 +157,12 @@
     margin-bottom: 35px;
   }
   &__link{
-    @extend %rubik-500;
+    @extend %link;
     color: #fff;
-    font-size: 15px;
-    line-height: 21px;
-    text-decoration: none;
     padding: 20px 100px 20px 25px;
     background-color: $icon-grey;
-    display: inline-block;
-    position: relative;
     &::after{
-      content: '';
       background-image: url(../images/icons/arrow_right_icon.svg);
-      background-repeat: no-repeat;
-      width: 24px;
-      height: 12px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 20px;
     }
   }
   &__img{
@@ -264,9 +251,10 @@
 
 
 .products{
-  padding: 70px 0 30px;
+  padding: 70px 0 100px;
 }
 .products-week{
+  margin-bottom: 150px;
   &__filter{
     margin-bottom: 80px;
   }
@@ -286,19 +274,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0px 6px 47px 3px rgba(37,37,37,0.05);
+    border-radius: 10px;
     &:hover .products-week__btn{
       opacity: 1;
     }
   }
   &__img{
     display: inline-block;
-    margin-bottom: 70px;
+    margin-bottom: 105px;
   }
   &__content{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 35px;
   }
   &__title{
     @extend %dmsans-500;
@@ -358,7 +348,64 @@
     transition: fill .2s;
   }
 }
-
+.products-best{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 870px;
+    max-width: 100%;
+    height: 390px;
+    background-color: rgba(252, 215, 182, .4);
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+  &__image{
+    transform: translateY(-90px);
+    margin-left: auto;
+    &--first{
+      margin-right: 20px;
+    }
+    &--second{
+      margin-right: 60px;
+    }
+  }
+  &__content{
+    padding-right: 150px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    color: $primary;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+  &__text{
+    @extend %rubik-400;
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 330px;
+    margin-bottom: 30px;
+  }
+  &__link{
+    @extend %link;
+    color: $second;
+    padding: 18px 84px 18px 20px;
+    border: 1px solid $second;
+    transition: background-color .2s;
+    &::after{
+      background-image: url(../images/icons/arrow_right_icon_2.svg);
+    }
+    &:hover{
+      background-color: rgba(64, 99, 113, .06);
+    }
+  }
+}
 
 
 

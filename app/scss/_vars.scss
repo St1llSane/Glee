@@ -34,6 +34,24 @@ $icon-grey: #a3bbc8;
   font-weight: 700;
 }
 
+%link{
+  @extend %rubik-500;
+  font-size: 15px;
+  line-height: 21px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  &::after{
+    content: '';
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}
 %footer-hover{
   transition: opacity .2s;
   &:hover{

@@ -14,6 +14,17 @@ $(function(){
 
   $('.video__wrapper').fancybox({});
   
-  var mixer = mixitup('.products-week__wrapper', {});
-
+  var mixer1 = mixitup('.products-week__wrapper', {
+    selectors: {
+      control: '.filter-1'
+    }
+  });
+  var mixer2 = mixitup('.design__wrapper', {
+    selectors: {
+      control: '.filter-2'
+    }
+  });
+  
 });
+
+// .design__wrapper

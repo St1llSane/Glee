@@ -24,13 +24,6 @@ main{
 
 .filter{
   text-align: center;
-  &__title{
-    @extend %dmsans-700;
-    color: #191919;
-    font-size: 36px;
-    line-height: 46px;
-    margin-bottom: 30px;
-  }
   &__wrapper{
     display: flex;
     justify-content: center;
@@ -56,4 +49,10 @@ main{
       color: #1a1a1a;
     }
   }
+}
+.title{
+  @extend %dmsans-700;
+  color: #191919;
+  font-size: 36px;
+  line-height: 46px;
 }

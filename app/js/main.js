@@ -13,6 +13,13 @@ $(function(){
   });
 
   $('.video__wrapper').fancybox({});
+
+  $('.partners-slider__wrapper').slick({
+    arrows: false,
+    autoplay: 2000,
+    slidesToShow: 5,
+    slidesToScroll: 1
+  });
   
   var mixer1 = mixitup('.products-week__wrapper', {
     selectors: {

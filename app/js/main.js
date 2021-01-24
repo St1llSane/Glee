@@ -17,6 +17,7 @@ $(function(){
   $('.partners-slider__wrapper').slick({
     arrows: false,
     autoplay: 2000,
+    draggable: false,
     slidesToShow: 5,
     slidesToScroll: 1
   });

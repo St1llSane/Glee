@@ -137,11 +137,13 @@
 .slider-top{
   background-color: $bg-light;
   padding: 220px 0 280px;
+  background-image: url(../images/slider-top/slider_top_elipse.png);
+  background-repeat: no-repeat;
+  background-position: center right 185px;
   &__item{
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-
   }
   &__title{
     @extend %rubik-500;
@@ -585,6 +587,7 @@
     border-radius: 5px;
     position: relative;
     &-img{
+      height: 250px;
       object-fit: cover;
     }
     &-content{

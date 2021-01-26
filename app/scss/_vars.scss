@@ -1,11 +1,15 @@
 $primary: #243f4d;
-$second: #436372;
+$second: #c2cdd3;
 $default-grey: #7b7b7b;
 $bg: hsla(28, 92%, 85%, 0.2);
 $bg-light: #fcd7b6;
 $icon-grey: #a3bbc8;
 $grey-light: rgba(163, 187, 200, .2);
 
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -13,6 +17,10 @@ $grey-light: rgba(163, 187, 200, .2);
 %rubik-500{
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
 }
 %poppins-700{
   font-family: 'Poppins-Bold', sans-serif;

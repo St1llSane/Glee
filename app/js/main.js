@@ -19,7 +19,8 @@ $(function(){
     autoplay: 2000,
     draggable: false,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    pauseOnHover: false,
   });
   
   var mixer1 = mixitup('.products-week__wrapper', {

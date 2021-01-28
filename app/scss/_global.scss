@@ -100,3 +100,43 @@ main{
     }
   }
 }
+
+.pagination{
+  display: flex;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    & + &{
+      margin-left: 15px;
+    }
+  }
+  &__link,
+  &__arrow{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $primary;
+    &:hover{
+      background-color: $grey-light;
+    }
+  }
+  &__link{
+    width: 50px;
+    &--active{
+      color: #fff;
+      background-color: $icon-grey;
+      &:hover{
+        background-color: $icon-grey;
+      }
+    }
+  }
+  &__arrow{
+    padding: 0 20px;
+    &:last-child{
+      margin-left: 15px;
+    }
+  }
+}

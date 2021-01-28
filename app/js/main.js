@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.user-nav__btn-list').on('click', function(){
+    $('.products-list__item').toggleClass('products-list__item--active')
+  });
+
   $('.filter-recent__stars').rateYo({
     starWidth: "14px",
     readOnly: true,
@@ -10,16 +14,31 @@ $(function(){
     spacing: "4px"
   });
 
+  $('.products-week__stars').rateYo({
+    starWidth: "18px",
+    readOnly: true,
+    normalFill: "#D6D6D6",
+    ratedFill: "#FFCC00",
+    numStars: 5,
+    fullStar: true,
+    spacing: "4px"
+  });
+
+  function my_prettify (n) {
+    return n.toFixed(2);
+  }
   $('.filter-price__input').ionRangeSlider({
     type: "double",
+    step: 0.01,
     onStart: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
     },
     onChange: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
     },
+    prettify: my_prettify,
   });
   
   $('.slider-top__wrapper').slick({

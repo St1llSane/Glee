@@ -1,4 +1,26 @@
 $(function(){
+
+  $('.filter-recent__stars').rateYo({
+    starWidth: "14px",
+    readOnly: true,
+    normalFill: "#D6D6D6",
+    ratedFill: "#FFCC00",
+    numStars: 5,
+    fullStar: true,
+    spacing: "4px"
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
   
   $('.slider-top__wrapper').slick({
     arrows: false,

@@ -1147,6 +1147,190 @@
 
 
 
+.products{
+  padding: 120px 0;
+  &__filters{
+    width: 270px;
+  }
+}
+.filter__item{
+  margin-bottom: 60px;
+  &-title{
+    @extend %dmsans-700;
+    color: $primary;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    position: relative;
+    padding-right: 57px;
+    display: inline-block;
+    &::after{
+      content: '';
+      width: 40px;
+      height: 3px;
+      background-color: $icon-grey;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+  &--price{
+    margin-bottom: 80px;
+  }
+}
+.filter-category{
+  &__label{
+    cursor: pointer;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: $grey-light;
+      border-radius: 5px;
+    }
+  }
+  &__checkbox{
+    padding: 12px 0 12px 15px;
+    color: $primary;
+    position: relative;
+    &::after{
+      content: '';
+      background-image: url(../images/icons/arrow_right_icon_3.svg);
+      width: 8px;
+      height: 13px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 22px;
+    }
+    &:hover{
+      background-color: rgba(163, 187, 200, .1);
+    }
+  }
+}
+
+.filter-price{
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+  }
+  &__label{
+    color: $primary;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+  display: none;
+}
+.irs--flat .irs-line{
+  top: 0;
+  height: 3px;
+  border-radius: 1px;
+  background-color: rgba(163, 187, 200, .65);
+}
+.irs--flat .irs-bar{
+  top: 0;
+  height: 4px;
+  background-color: $icon-grey;
+}
+.irs--flat .irs-handle{
+  top: -6px;
+  width: 15px;
+  height: 15px;
+  background-color: $icon-grey;
+}
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+.irs--flat{
+  height: unset;
+  margin-bottom: 25px;
+}
+
+.filter-brand{
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-brand__checkbox{
+      background-color: $grey-light;
+      border-radius: 5px;
+    }
+    &:checked + .filter-brand__checkbox .filter-brand__checkbox-num{
+      color: $primary;
+    }
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    color: $primary;
+    &-num{
+      color: #b3b3b3;
+    }
+    &:hover{
+      background-color: rgba(163, 187, 200, .1);
+    }
+  }
+}
+
+.filter-recent{
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:not(:last-child){
+      margin-bottom: 27px;
+    }
+    &:hover{
+      background-color: rgba(163, 187, 200, .1);
+    }
+  }
+  &__image{
+    width: 71px;
+    height: 71px;
+    margin-right: 18px;
+    text-align: center;
+  }
+  &__img{
+    display: inline-block;
+  }
+  &__name{
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  &__stars{
+    margin-bottom: 8px;
+  }
+  &__cost{
+    color: #333333;
+    font-size: 15px;
+  }
+}
+.filter-recent__stars{
+  padding: 0;
+}
+
+
+
+
+
+
+
+
 
 
 @import 'media';

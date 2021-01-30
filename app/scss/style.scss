@@ -1593,6 +1593,161 @@
 
 
 
+.product-details{
+  padding: 120px 0 50px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__slider{
+    display: flex;
+    align-items: center;
+  }
+  &__title{
+    @extend %rubik-400;
+    color: #333333;
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 15px;
+  }
+  &__stars{
+    margin-bottom: 30px;
+  }
+  .jq-ry-container{
+    padding: 0;
+  }
+  &__cost{
+    color: #333333;
+    font-size: 30px;
+    line-height: 42px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  &__text{
+    max-width: 535px;
+    margin-bottom: 30px;
+  }
+}
+.product-details__form{
+  display: flex;
+  margin-bottom: 52px;
+  &-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    background-color: $icon-grey;
+    border-radius: 5px;
+    padding: 12px 51px;
+    transition: background-color .2s;
+    &:hover{
+      background-color: $second;
+    }
+  }
+  &-num{
+    width: 158px;
+    border: 1px solid $icon-grey;
+    margin-right: 17px;
+  }
+  &-numbers{
+    width: 52px;
+    height: 52px;
+    outline: none;
+    border: none;
+    padding-left: 21px;
+    color: #333333;
+    font-size: 15px;
+    position: relative;
+  }
+  .jq-number__field{
+    margin-left: 31px;
+  }
+  .jq-number__spin{
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    transition: background-color .1s;
+    &::after{
+      content: '';
+      background-color: #333333;
+      width: 8px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:hover{
+      background-color: $grey-light;
+    }
+  }
+  .jq-number__spin.minus{
+    left: 0;
+    border-right: 1px solid $icon-grey;
+  }
+  .jq-number__spin.plus{
+    right: -104px;
+    border-left: 1px solid $icon-grey;
+    &::before{
+      content: '';
+      width: 8px;
+      height: 1px;
+      background-color: #333333;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+}
+.product-details__info{
+  &-item{
+    display: flex;
+    &-text{
+      margin-right: 6px;
+    }
+    a{
+      color: $primary;
+      text-decoration: none;
+      @extend %footer-hover;
+    }
+  }
+}
+.product-slider__thumb{
+  width: 138px;
+  &-item{
+    display: inline-block;
+    margin-bottom: 25px;
+    &--last{
+      margin-bottom: 0;
+    }
+  }
+  &-img{
+    width: 138px;
+    height: 160px;
+    object-fit: cover;
+  }
+}
+.product-slider__big{
+  width: 387px;
+  height: 530px;
+  &-img{
+    width: 387px;
+    height: 530px;
+    object-fit: cover;
+  }
+}
+
+
+
+
 
 
 

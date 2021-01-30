@@ -6,6 +6,7 @@ body{
   @extend %rubik-400;
   color: $primary;
   font-size: 16px;
+  line-height: 28px;
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +22,9 @@ main{
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.slick-slide{
+  outline: none;
 }
 
 .filter{

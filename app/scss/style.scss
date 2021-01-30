@@ -993,6 +993,44 @@
 
 
 
+.error{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title{
+    @extend %poppins-700;
+    color: $primary;
+    font-size: 48px;
+    line-height: 62px;
+    max-width: 585px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    max-width: 455px;
+    line-height: 28px;
+    margin-bottom: 55px;
+  }
+  &__link{
+    @extend %rubik-500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 33px;
+    background-color: $second;
+    display: inline-block;
+    transition: background-color .3s;
+    &:hover{
+      background-color: $primary;
+    }
+  }
+}
+
+
+
+
+
 .about-experience{
   padding: 120px 0 60px;
   &__inner{
@@ -1108,8 +1146,6 @@
 
 
 
-
-
 .about-advantages{
   background-color: $bg-light;
   padding: 80px 0;
@@ -1141,8 +1177,6 @@
     ;height: 26px;
   }
 }
-
-
 
 
 

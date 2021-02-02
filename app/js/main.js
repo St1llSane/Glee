@@ -1,5 +1,22 @@
 $(function(){
 
+  $('.related-products__inner').slick({
+    arrows: true,
+    slidesToShow: 4,
+    draggable: false,
+    prevArrow: '<button class="slick-arrow slick-prev"><img src="images/icons/arrow_left_icon_1.svg" alt=""></button>',
+    nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/arrow_right_icon_5.svg" alt=""></button>',
+  });
+
+  $('.product-tabs__tab').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__tab').removeClass('product-tabs__tab--active');
+    $(this).addClass('product-tabs__tab--active');
+
+    $('.product-tabs__item').removeClass('product-tabs__item--active');
+    $($(this).attr('href')).addClass('product-tabs__item--active');
+  });
+
   $('.product-details__form-numbers').styler();
 
   $('.product-slider__thumb').slick({

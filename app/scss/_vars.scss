@@ -1,10 +1,15 @@
 $primary: #243f4d;
 $second: #436372;
 $default-grey: #7b7b7b;
-$bg: hsla(28, 92%, 85%, 0.2);
+$bg: rgba(252, 214, 182, 0.2);
 $bg-light: #fcd7b6;
 $icon-grey: #a3bbc8;
+$grey-light: rgba(163, 187, 200, .2);
 
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -12,6 +17,10 @@ $icon-grey: #a3bbc8;
 %rubik-500{
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
 }
 %poppins-700{
   font-family: 'Poppins-Bold', sans-serif;
@@ -58,6 +67,22 @@ $icon-grey: #a3bbc8;
     transform: translateY(-50%);
     right: 20px;
   }
+}
+%form-btn{
+  display: block;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  @extend %rubik-500;
+  font-size: 18px;
+  line-height: 26px;
+}
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
 %footer-hover{
   transition: opacity .2s;

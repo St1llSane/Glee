@@ -1,4 +1,79 @@
 $(function(){
+
+  $('.related-products__inner').slick({
+    arrows: true,
+    slidesToShow: 4,
+    draggable: false,
+    prevArrow: '<button class="slick-arrow slick-prev"><img src="images/icons/arrow_left_icon_1.svg" alt=""></button>',
+    nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/arrow_right_icon_5.svg" alt=""></button>',
+  });
+
+  $('.product-tabs__tab').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__tab').removeClass('product-tabs__tab--active');
+    $(this).addClass('product-tabs__tab--active');
+
+    $('.product-tabs__item').removeClass('product-tabs__item--active');
+    $($(this).attr('href')).addClass('product-tabs__item--active');
+  });
+
+  $('.product-details__form-numbers').styler();
+
+  $('.product-slider__thumb').slick({
+    arrows: false,
+    vertical: true,
+    slidesToShow: 3,
+    asNavFor: '.product-slider__big',
+    centerMode: false,
+    focusOnSelect: true,
+  });
+  $('.product-slider__big').slick({
+    arrows: false,
+    draggable: false,
+    asNavFor: '.product-slider__thumb',
+    fade: true
+  });
+
+  $('.user-nav__btn-list').on('click', function(){
+    $('.products-list__item').toggleClass('products-list__item--active')
+  });
+
+  $('.filter-recent__stars').rateYo({
+    starWidth: "14px",
+    readOnly: true,
+    normalFill: "#D6D6D6",
+    ratedFill: "#FFCC00",
+    numStars: 5,
+    fullStar: true,
+    spacing: "4px"
+  });
+
+  $('.products-week__stars, .product-details__stars').rateYo({
+    starWidth: "18px",
+    readOnly: true,
+    normalFill: "#D6D6D6",
+    ratedFill: "#FFCC00",
+    numStars: 5,
+    fullStar: true,
+    spacing: "11px"
+  });
+
+  function my_prettify (n) {
+    return n.toFixed(2);
+  }
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    step: 0.01,
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+    },
+    prettify: my_prettify,
+  });
   
   $('.slider-top__wrapper').slick({
     arrows: false,
@@ -19,7 +94,8 @@ $(function(){
     autoplay: 2000,
     draggable: false,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    pauseOnHover: false,
   });
   
   var mixer1 = mixitup('.products-week__wrapper', {

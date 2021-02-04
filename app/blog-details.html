@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Document</title>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/logo.png" alt="logo">
+      </a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a class="menu__list-link menu__list-link--active" href="#">Home</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#">About</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#">Services</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link menu__list-link--active" href="#">Pages</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#">News</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-nav">
+        <a class="user-nav__btn user-nav__btn--search" href="#">
+          <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="19px" height="20px"  viewBox="0 0 19 20">
+            <path fill-rule="evenodd"
+            d="M4.7020264,8.075829 C5.057617,8.010796 5.381958,8.206558 5.44751,8.560493 C5.5440674,9.1418915 5.8031006,9.626884 6.227173,10.049454 C6.6483154,10.437706 7.1693115,10.726929 7.7211914,10.826286 C8.045654,10.891647 8.2734375,11.215515 8.207886,11.569458 C8.142334,11.89267 7.849121,12.125038 7.4936523,12.084511 C6.682617,11.923065 5.937256,11.535141 5.35083,10.954063 C4.767578,10.372993 4.3776855,9.626884 4.215454,8.818352 C4.1499023,8.464409 4.3432617,8.141846 4.7020264,8.075829 ZM7.9802246,1.9964676 C11.445557,1.9964676 14.258911,4.7966003 14.258911,8.25296 C14.258911,9.182091 14.056152,10.064812 13.691162,10.85733 C13.691162,10.85733 16.027344,12.893372 16.027344,12.893372 C17.730347,14.639526 16.772827,16.159203 16.320557,16.610207 C15.899414,17.06382 14.327515,18.02465 12.590088,16.318367 C12.590088,16.318367 10.531616,13.968254 10.531616,13.968254 C9.751709,14.31337 8.890991,14.5065155 7.9831543,14.5065155 C4.5148926,14.5065155 1.7045898,11.705406 1.7045898,8.249695 C1.7045898,4.7939835 4.5117188,1.9964676 7.9802246,1.9964676 ZM13.525879,15.5131 C13.81897,15.836967 14.651855,16.380455 15.406616,15.73925 C15.615723,15.563103 16.039795,14.670578 15.178955,13.865639 C15.178955,13.865639 13.017456,11.985809 13.017456,11.985809 C12.633789,12.498253 12.175293,12.952522 11.654419,13.325745 C11.654419,13.325745 13.525879,15.5131 13.525879,15.5131 ZM7.9802246,13.200897 C10.721924,13.200897 12.945679,10.984787 12.945679,8.25296 C12.945679,5.521141 10.721924,3.3053513 7.9802246,3.3053513 C5.2384033,3.3053513 3.0146484,5.521141 3.0146484,8.25296 C3.0146484,10.984787 5.2353516,13.200897 7.9802246,13.200897 Z"/>
+          </svg>
+        </a>
+        <div class="user-nav__box">
+          <a class="user-nav__link" href="#">
+            <svg class="user-nav__product" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="21px" height="19px"  viewBox="0 0 21 19">
+              <path fill-rule="evenodd"
+              d="M10.912964,17.244453 C10.817749,17.244453 10.722412,17.226479 10.633423,17.18824 C10.280029,17.038559 1.9831543,13.438721 1.9831543,6.4285965 C2.0743408,3.778801 4.1900635,1.7211914 6.800659,1.7211914 C8.544067,1.7211914 10.066772,2.6392136 10.912964,4.031105 C11.7595215,2.6392136 13.282349,1.7211914 15.0251465,1.7211914 C17.634521,1.7211914 19.750244,3.778801 19.842041,6.4047394 C19.842041,13.438721 11.545044,17.038559 11.192871,17.18824 C11.103394,17.226479 11.008179,17.244453 10.912964,17.244453 ZM6.800659,3.106224 C4.9543457,3.106224 3.4575195,4.575897 3.3928223,6.4524536 C3.3931885,11.859566 9.5177,15.114944 10.912964,15.786865 C12.308228,15.114944 18.433105,11.856949 18.433105,6.4285965 C18.367554,4.575897 16.870117,3.106224 15.0251465,3.106224 C13.180176,3.106224 11.682861,4.575897 11.61731,6.4524536 C11.604858,6.82502 11.29248,7.121437 10.912964,7.121437 C10.912964,7.121437 10.912964,7.121437 10.912964,7.121437 C10.532471,7.121437 10.221069,6.82502 10.208252,6.4524536 C10.143555,4.575897 8.646606,3.106224 6.800659,3.106224 Z"/>
+            </svg>
+            <span class="user-nav__nums user-nav__nums--heart">0</span>
+          </a>
+          <a class="user-nav__link" href="#">
+            <svg class="user-nav__product" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="22px" height="20px"  viewBox="0 0 22 20">
+              <path fill-rule="evenodd"
+              d="M7.5264893,18.977768 C6.989624,18.977768 6.4626465,18.76796 6.0649414,18.371208 C5.4681396,17.77739 5.2907715,16.890747 5.6123047,16.110977 C5.934326,15.334145 6.685791,14.830849 7.5272217,14.830849 C7.5272217,14.830849 7.5272217,14.830849 7.5272217,14.830849 C7.5290527,14.830849 7.5303955,14.830849 7.532593,14.830849 C8.083374,14.830849 8.602173,15.044586 8.993652,15.433495 C9.385986,15.826645 9.602051,16.345627 9.602051,16.899574 C9.603882,17.740463 9.102905,18.49311 8.325439,18.81665 C8.066528,18.925156 7.795044,18.977768 7.5264893,18.977768 ZM7.532593,16.014565 C7.5303955,16.014565 7.5290527,16.014565 7.5285645,16.014565 C7.1674805,16.014565 6.845459,16.230263 6.7070312,16.563606 C6.569824,16.896957 6.6453857,17.278671 6.901123,17.532936 C7.1568604,17.786865 7.5375977,17.862038 7.869873,17.72445 C8.203369,17.5849 8.417969,17.261353 8.417114,16.90055 C8.417114,16.663612 8.324463,16.441055 8.156616,16.272095 C7.9906006,16.107376 7.7681885,16.014565 7.532593,16.014565 ZM15.918457,18.977768 C15.38147,18.977768 14.854126,18.76796 14.456787,18.371208 C13.859985,17.776085 13.682617,16.890747 14.004761,16.110977 C14.325806,15.334145 15.076904,14.830849 15.918457,14.830849 C15.918457,14.830849 15.918457,14.830849 15.918457,14.830849 C16.464111,14.7909775 16.998291,15.048836 17.385986,15.434143 C17.77832,15.826645 17.993408,16.345627 17.993408,16.899574 C17.996216,17.739151 17.49585,18.49311 16.718628,18.81665 C16.45935,18.925156 16.1875,18.976463 15.918457,18.977768 ZM15.924316,16.014565 C15.92334,16.014565 15.922607,16.014565 15.922607,16.014565 C15.591675,16.04692 15.237915,16.229607 15.099976,16.562958 C14.961304,16.896957 15.0373535,17.278671 15.292847,17.532936 C15.549316,17.788177 15.93103,17.862038 16.262695,17.72445 C16.595337,17.5849 16.810425,17.261353 16.809326,16.900879 C16.809326,16.663612 16.716797,16.441055 16.549072,16.272095 C16.384277,16.109016 16.156738,16.014565 15.924316,16.014565 ZM4.6452637,16.178299 C4.5612793,16.178299 4.476074,16.160652 4.3951416,16.122414 C4.098633,15.983841 3.970337,15.631538 4.109131,15.335121 C4.6879883,14.09552 5.736328,13.361504 7.1627197,13.184372 C7.1627197,13.184372 6.10791,7.793274 6.10791,7.793274 C6.045288,7.4726715 6.2545166,7.1608963 6.5754395,7.0978165 C6.8964844,7.0317993 7.2070312,7.245865 7.270752,7.565811 C7.270752,7.565811 8.362061,13.143845 8.362061,13.143845 C8.362061,13.143845 17.785034,13.143845 17.785034,13.143845 C17.785034,13.143845 19.592041,6.3726196 19.592041,6.3726196 C19.592041,6.3726196 6.314087,6.3726196 6.314087,6.3726196 C6.3060303,6.3726196 6.2978516,6.3726196 6.289551,6.3726196 C4.161743,6.3726196 2.3214111,4.788887 2.0065918,2.6796417 C1.9576416,2.3551178 2.1809082,2.054123 2.5048828,2.0064087 C2.8198242,1.9511795 3.1291504,2.180603 3.1778564,2.505127 C3.4068604,4.0365677 4.744629,5.1869507 6.293091,5.1869507 C6.298828,5.1869507 6.3050537,5.1869507 6.310791,5.1869507 C6.310791,5.1869507 20.36316,5.1869507 20.36316,5.1869507 C20.547363,5.1869507 20.720947,5.272896 20.832764,5.4189835 C20.945435,5.565071 20.983154,5.755272 20.936035,5.9320755 C20.936035,5.9320755 18.812866,13.8880005 18.812866,13.8880005 C18.74353,14.146507 18.5083,14.32756 18.240112,14.32756 C18.240112,14.32756 7.8847656,14.32756 7.8847656,14.32756 C7.8760986,14.3256 7.868286,14.3256 7.8623047,14.32756 C6.532715,14.328537 5.656616,14.821045 5.182251,15.837433 C5.0820312,16.05149 4.8685303,16.178299 4.6452637,16.178299 Z"/>
+            </svg>
+            <span class="user-nav__nums user-nav__nums--cart">0</span>
+          </a>
+        </div>
+        <a class="user-nav__btn" href="#">
+          <svg class="user-nav__icon user-nav__icon--btn" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="24px" height="23px"  viewBox="0 0 24 23">
+            <path fill-rule="evenodd"
+            d="M4.145752,5.880539 C2.9591064,5.880539 1.9998779,4.9213486 1.9998779,3.7350159 C1.9998779,2.5480347 2.9591064,1.5891685 4.145752,1.5891685 C5.3325195,1.5891685 6.291748,2.5480347 6.291748,3.7350159 C6.291748,4.9213486 5.3325195,5.880539 4.145752,5.880539 ZM4.145752,13.749855 C2.9591064,13.749855 1.9998779,12.7896805 1.9998779,11.603027 C1.9998779,10.416695 2.9591064,9.457832 4.145752,9.457832 C5.3325195,9.457832 6.291748,10.416695 6.291748,11.603027 C6.291748,12.7896805 5.3325195,13.749855 4.145752,13.749855 ZM4.145752,21.617859 C2.9591064,21.617859 1.9998779,20.658989 1.9998779,19.472008 C1.9998779,18.285355 2.9591064,17.326164 4.145752,17.326164 C5.3325195,17.326164 6.291748,18.285355 6.291748,19.472008 C6.291748,20.658989 5.3325195,21.617859 4.145752,21.617859 ZM12.014282,5.880539 C10.827637,5.880539 9.868286,4.9213486 9.868286,3.7350159 C9.868286,2.5480347 10.827637,1.5891685 12.014282,1.5891685 C13.20105,1.5891685 14.160156,2.5480347 14.160156,3.7350159 C14.160156,4.9213486 13.20105,5.880539 12.014282,5.880539 ZM12.014282,13.749855 C10.827637,13.749855 9.868286,12.7896805 9.868286,11.603027 C9.868286,10.416695 10.827637,9.457832 12.014282,9.457832 C13.20105,9.457832 14.160156,10.416695 14.160156,11.603027 C14.160156,12.7896805 13.20105,13.749855 12.014282,13.749855 ZM12.014282,21.617859 C10.827637,21.617859 9.868286,20.658989 9.868286,19.472008 C9.868286,18.285355 10.827637,17.326164 12.014282,17.326164 C13.20105,17.326164 14.160156,18.285355 14.160156,19.472008 C14.160156,20.658989 13.20105,21.617859 12.014282,21.617859 ZM19.882812,5.880539 C18.696167,5.880539 17.736938,4.9213486 17.736938,3.7350159 C17.736938,2.5480347 18.696167,1.5891685 19.882812,1.5891685 C21.06958,1.5891685 22.028809,2.5480347 22.028809,3.7350159 C22.028809,4.9213486 21.06958,5.880539 19.882812,5.880539 ZM19.882812,13.749855 C18.696167,13.749855 17.736938,12.7896805 17.736938,11.603027 C17.736938,10.416695 18.696167,9.457832 19.882812,9.457832 C21.06958,9.457832 22.028809,10.416695 22.028809,11.603027 C22.028809,12.7896805 21.06958,13.749855 19.882812,13.749855 ZM19.882812,21.617859 C18.696167,21.617859 17.736938,20.658989 17.736938,19.472008 C17.736938,18.285355 18.696167,17.326164 19.882812,17.326164 C21.06958,17.326164 22.028809,18.285355 22.028809,19.472008 C22.028809,20.658989 21.06958,21.617859 19.882812,21.617859 Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main>
+  <section class="top">
+    <div class="top__inner">
+      <h2 class="top__title">
+        Blog Details
+      </h2>
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Home 
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Home 
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">
+              About Us
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="blog-details">
+    <div class="container-small">
+      <div class="blog-details__inner">
+        <div class="blog-details__wrapper">
+          <div class="news__item blog-details__item">
+            <div class="news__item-image">
+              <img class="news__item-img" src="images/blog/news_1.jpg" alt="">
+            </div>
+            <div class="blog__item-content-about news__item-info">
+              <time class="blog__item-content-time news__item-date">
+                28 JANUARY, 2020
+              </time>
+              <a class="blog__item-content-autor news__item-auto" href="#">
+                BY ADMIN
+              </a>
+            </div>
+            <div class="news__item-content">
+              <h3 class="news__item-title blog-details__title">
+                Fonsectetur adipisicing  eiusmod
+              </h3>
+            </div>
+          </div>
+          <div class="blog-details__content">
+            <h6>
+              Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            </h6>
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <blockquote>
+              <p>
+                Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              </p>
+              <div>Wiusmod tempor</div>
+            </blockquote>
+            <div class="blog-details__content-textpic">
+              <img class="blog-details__left-img" src="images/blog/blog_details_1.jpg" alt="">
+              <div>
+                <h5>
+                  Riusmod tempor incididunt
+                </h5>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                </p>
+              </div>
+            </div>
+            <h5>
+              Kajtsal jervcm eoaspckred
+            </h5>
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            </p>
+          </div>
+          <div class="blog-details__autor">
+            <div class="blog-details__about">
+              <img class="blog-details__about-img" src="images/blog/blog_autor.jpg" alt="">
+              <div class="blog-details__about-content">
+                <h6 class="blog-details__about-name">
+                  Mark N. Hernandez
+                </h6>
+                <div class="blog-details__about-position">
+                  Designer
+                </div>
+              </div>
+            </div>
+            <div class="blog-details__info">
+              <ul class="blog-details__info-tags">
+                <span>Tags:</span> 
+                <li class="blog-details__info-tag">All,</li>
+                <li class="blog-details__info-tag">Trending</li>
+              </ul>
+              <ul class="blog-details__info-share">
+                <span>Share:</span>
+                <li class="blog-details__info-social">
+                  <a class="blog-details__info-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="21px" height="21px" viewBox="0 0 21 21">
+                      <path fill-rule="evenodd"
+                      d="M5.588257,18.939453 C3.6380615,18.435425 2.4741821,17.16455 2.1641846,15.189819 C1.9334717,13.739136 1.9091797,6.9992676 2.3275757,5.5356445 C2.8738403,3.6295166 4.1464844,2.510376 6.0753174,2.1933594 C6.94928,2.0500488 8.658447,1.9993896 10.38501,1.9993896 C11.990173,1.9993896 13.608826,2.043457 14.58374,2.0965576 C15.764465,2.1586914 16.845337,2.5385742 17.723083,3.3809814 C18.559204,4.181885 18.986877,5.1829834 19.095215,6.316162 C19.223206,7.6689453 19.306274,14.063843 18.90802,15.562622 C18.374817,17.523438 17.095032,18.68335 15.11084,19.001587 C14.369385,19.121216 12.366455,19.193115 10.366821,19.193115 C8.319946,19.193115 6.2755737,19.117798 5.588257,18.939453 ZM6.5057373,3.6846924 C5.0061035,3.8571777 3.9976196,4.782715 3.758545,6.274536 C3.5115967,7.8553467 3.5143433,13.767334 3.6988525,14.954956 C3.8897095,16.190674 4.588257,17.039917 5.821228,17.385132 C6.4888916,17.572876 8.487122,17.639404 10.446716,17.639404 C12.250183,17.639404 14.021606,17.58313 14.687317,17.509644 C16.20105,17.344482 17.201904,16.411743 17.440979,14.906494 C17.68811,13.394165 17.688416,7.876709 17.547424,6.4606934 C17.393372,4.94812 16.468018,3.9539795 14.972168,3.7191162 C14.231262,3.6069336 12.447266,3.5566406 10.67218,3.5566406 C8.960144,3.5566406 7.255554,3.6036377 6.5057373,3.6846924 ZM6.1905518,10.597412 C6.209778,8.159668 8.199585,6.184326 10.636719,6.1914062 C13.067749,6.1914062 15.027649,8.166626 15.009033,10.604126 C14.990845,13.03479 13.000488,15.01001 10.562866,15.01001 C8.125305,15.01001 6.171875,13.03479 6.1905518,10.597412 ZM7.7443237,10.569702 C7.719116,12.144409 8.972717,13.435669 10.547058,13.448853 C10.547058,13.448853 10.572693,13.449341 10.572693,13.449341 C12.135376,13.449341 13.422546,12.190674 13.44873,10.625122 C13.473877,9.043213 12.220337,7.759033 10.64563,7.745117 C10.64563,7.745117 10.6203,7.745117 10.6203,7.745117 C9.057312,7.745117 7.770508,9.003906 7.7443237,10.569702 ZM14.187805,6.018921 C14.192505,5.4501953 14.651367,4.989868 15.218689,4.989868 C15.218689,4.989868 15.231262,4.989868 15.231262,4.989868 C15.798096,4.989868 16.257019,5.4526367 16.25232,6.025879 C16.247742,6.591919 15.781738,7.0546875 15.208862,7.0546875 C14.636047,7.048218 14.183533,6.585205 14.187805,6.018921 Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="blog-details__info-social">
+                  <a class="blog-details__info-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="26px" height="18px"  viewBox="0 0 26 18">
+                      <path fill-rule="evenodd"
+                      d="M8.751099,16.34961 C7.342407,16.266724 6.0617676,15.824951 4.9281006,14.989136 C3.4659424,13.912109 2.5447998,12.475464 2.1577148,10.700562 C2.0170898,10.05835 1.9671631,9.416382 2.0203857,8.767212 C2.121704,7.234131 2.6573486,5.8598633 3.6400146,4.665161 C4.657837,3.414917 5.954956,2.6004639 7.505371,2.2073975 C7.898926,2.1035156 8.293457,2.0411377 8.694458,2.02063 C8.921875,2.0131836 9.150269,1.9996338 9.378052,1.9996338 C10.593262,2.0131836 11.731079,2.317505 12.775635,2.9320068 C13.476929,3.3327637 13.8741455,3.7398682 14.04541,3.86438 C13.329224,4.5687256 12.640625,5.2593994 11.9375,5.949585 C11.416016,5.5004883 10.839355,5.08667 9.839233,4.9344482 C9.631958,4.904785 9.427002,4.8895264 9.226318,4.8895264 C7.219116,4.8895264 5.537842,6.3409424 5.09021,8.242554 C4.9832764,8.6698 4.953003,9.105591 4.9902344,9.5407715 C5.1434326,11.308594 6.326538,12.758789 7.925171,13.276855 C8.332153,13.404907 8.754272,13.465698 9.178711,13.465698 C9.278198,13.465698 9.377075,13.463013 9.477051,13.456665 C10.230103,13.407959 10.935547,13.207764 11.574707,12.786133 C12.650391,12.054321 12.997681,10.907959 13.000122,10.624878 C13.000122,10.624878 9.153931,10.624878 9.153931,10.624878 C9.154419,10.530029 9.168457,8.732544 9.174927,7.8552246 C9.174927,7.8552246 9.182373,7.7384033 9.182373,7.7384033 C9.182373,7.7384033 15.935913,7.7384033 15.935913,7.7384033 C16.29956,9.844971 15.97229,12.060791 14.660767,13.794312 C13.75415,14.989136 12.546875,15.742065 11.107422,16.11499 C10.46875,16.279907 9.820557,16.360962 9.168457,16.360962 C9.029297,16.360962 8.890137,16.35669 8.751099,16.34961 ZM22.08191,12.296265 C22.08191,12.296265 20.25879,12.296265 20.25879,12.296265 C20.25879,12.296265 20.189697,12.296265 20.189697,12.296265 C20.189697,12.296265 20.190063,12.226807 20.190063,12.226807 C20.190063,12.226807 20.208862,9.796265 20.208862,9.796265 C20.208862,9.796265 17.77832,9.796265 17.77832,9.796265 C17.77832,9.796265 17.702026,9.796265 17.702026,9.796265 C17.702026,9.796265 17.702637,9.720215 17.702637,9.720215 C17.702637,9.720215 17.716553,7.9040527 17.716553,7.9040527 C17.716553,7.9040527 17.717041,7.834717 17.717041,7.834717 C17.717041,7.834717 17.79309,7.834717 17.79309,7.834717 C17.79309,7.834717 20.223755,7.834717 20.223755,7.834717 C20.223755,7.834717 20.242432,5.397461 20.242432,5.397461 C20.242432,5.397461 20.24292,5.328369 20.24292,5.328369 C20.24292,5.328369 20.311523,5.328369 20.311523,5.328369 C20.311523,5.328369 22.135132,5.328369 22.135132,5.328369 C22.135132,5.328369 22.203857,5.328369 22.203857,5.328369 C22.203857,5.328369 22.20337,5.397461 22.20337,5.397461 C22.20337,5.397461 22.18457,7.834717 22.18457,7.834717 C22.18457,7.834717 24.6156,7.834717 24.6156,7.834717 C24.6156,7.834717 24.691406,7.834717 24.691406,7.834717 C24.691406,7.834717 24.690796,7.9040527 24.690796,7.9040527 C24.690796,7.9040527 24.67688,9.720215 24.67688,9.720215 C24.67688,9.720215 24.676392,9.796265 24.676392,9.796265 C24.676392,9.796265 24.60083,9.796265 24.60083,9.796265 C24.60083,9.796265 22.170166,9.796265 22.170166,9.796265 C22.170166,9.796265 22.15149,12.226807 22.15149,12.226807 C22.15149,12.226807 22.151001,12.296265 22.151001,12.296265 C22.151001,12.296265 22.08191,12.296265 22.08191,12.296265 Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="blog-details__info-social">
+                  <a class="blog-details__info-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="21px" height="21px" viewBox="0 0 21 21">
+                      <path fill-rule="evenodd"
+                      d="M5.588257,18.939453 C3.6380615,18.435425 2.4741821,17.16455 2.1641846,15.189819 C1.9334717,13.739136 1.9091797,6.9992676 2.3275757,5.5356445 C2.8738403,3.6295166 4.1464844,2.510376 6.0753174,2.1933594 C6.94928,2.0500488 8.658447,1.9993896 10.38501,1.9993896 C11.990173,1.9993896 13.608826,2.043457 14.58374,2.0965576 C15.764465,2.1586914 16.845337,2.5385742 17.723083,3.3809814 C18.559204,4.181885 18.986877,5.1829834 19.095215,6.316162 C19.223206,7.6689453 19.306274,14.063843 18.90802,15.562622 C18.374817,17.523438 17.095032,18.68335 15.11084,19.001587 C14.369385,19.121216 12.366455,19.193115 10.366821,19.193115 C8.319946,19.193115 6.2755737,19.117798 5.588257,18.939453 ZM6.5057373,3.6846924 C5.0061035,3.8571777 3.9976196,4.782715 3.758545,6.274536 C3.5115967,7.8553467 3.5143433,13.767334 3.6988525,14.954956 C3.8897095,16.190674 4.588257,17.039917 5.821228,17.385132 C6.4888916,17.572876 8.487122,17.639404 10.446716,17.639404 C12.250183,17.639404 14.021606,17.58313 14.687317,17.509644 C16.20105,17.344482 17.201904,16.411743 17.440979,14.906494 C17.68811,13.394165 17.688416,7.876709 17.547424,6.4606934 C17.393372,4.94812 16.468018,3.9539795 14.972168,3.7191162 C14.231262,3.6069336 12.447266,3.5566406 10.67218,3.5566406 C8.960144,3.5566406 7.255554,3.6036377 6.5057373,3.6846924 ZM6.1905518,10.597412 C6.209778,8.159668 8.199585,6.184326 10.636719,6.1914062 C13.067749,6.1914062 15.027649,8.166626 15.009033,10.604126 C14.990845,13.03479 13.000488,15.01001 10.562866,15.01001 C8.125305,15.01001 6.171875,13.03479 6.1905518,10.597412 ZM7.7443237,10.569702 C7.719116,12.144409 8.972717,13.435669 10.547058,13.448853 C10.547058,13.448853 10.572693,13.449341 10.572693,13.449341 C12.135376,13.449341 13.422546,12.190674 13.44873,10.625122 C13.473877,9.043213 12.220337,7.759033 10.64563,7.745117 C10.64563,7.745117 10.6203,7.745117 10.6203,7.745117 C9.057312,7.745117 7.770508,9.003906 7.7443237,10.569702 ZM14.187805,6.018921 C14.192505,5.4501953 14.651367,4.989868 15.218689,4.989868 C15.218689,4.989868 15.231262,4.989868 15.231262,4.989868 C15.798096,4.989868 16.257019,5.4526367 16.25232,6.025879 C16.247742,6.591919 15.781738,7.0546875 15.208862,7.0546875 C14.636047,7.048218 14.183533,6.585205 14.187805,6.018921 Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="blog-details__info-social">
+                  <a class="blog-details__info-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="26px" height="18px"  viewBox="0 0 26 18">
+                      <path fill-rule="evenodd"
+                      d="M8.751099,16.34961 C7.342407,16.266724 6.0617676,15.824951 4.9281006,14.989136 C3.4659424,13.912109 2.5447998,12.475464 2.1577148,10.700562 C2.0170898,10.05835 1.9671631,9.416382 2.0203857,8.767212 C2.121704,7.234131 2.6573486,5.8598633 3.6400146,4.665161 C4.657837,3.414917 5.954956,2.6004639 7.505371,2.2073975 C7.898926,2.1035156 8.293457,2.0411377 8.694458,2.02063 C8.921875,2.0131836 9.150269,1.9996338 9.378052,1.9996338 C10.593262,2.0131836 11.731079,2.317505 12.775635,2.9320068 C13.476929,3.3327637 13.8741455,3.7398682 14.04541,3.86438 C13.329224,4.5687256 12.640625,5.2593994 11.9375,5.949585 C11.416016,5.5004883 10.839355,5.08667 9.839233,4.9344482 C9.631958,4.904785 9.427002,4.8895264 9.226318,4.8895264 C7.219116,4.8895264 5.537842,6.3409424 5.09021,8.242554 C4.9832764,8.6698 4.953003,9.105591 4.9902344,9.5407715 C5.1434326,11.308594 6.326538,12.758789 7.925171,13.276855 C8.332153,13.404907 8.754272,13.465698 9.178711,13.465698 C9.278198,13.465698 9.377075,13.463013 9.477051,13.456665 C10.230103,13.407959 10.935547,13.207764 11.574707,12.786133 C12.650391,12.054321 12.997681,10.907959 13.000122,10.624878 C13.000122,10.624878 9.153931,10.624878 9.153931,10.624878 C9.154419,10.530029 9.168457,8.732544 9.174927,7.8552246 C9.174927,7.8552246 9.182373,7.7384033 9.182373,7.7384033 C9.182373,7.7384033 15.935913,7.7384033 15.935913,7.7384033 C16.29956,9.844971 15.97229,12.060791 14.660767,13.794312 C13.75415,14.989136 12.546875,15.742065 11.107422,16.11499 C10.46875,16.279907 9.820557,16.360962 9.168457,16.360962 C9.029297,16.360962 8.890137,16.35669 8.751099,16.34961 ZM22.08191,12.296265 C22.08191,12.296265 20.25879,12.296265 20.25879,12.296265 C20.25879,12.296265 20.189697,12.296265 20.189697,12.296265 C20.189697,12.296265 20.190063,12.226807 20.190063,12.226807 C20.190063,12.226807 20.208862,9.796265 20.208862,9.796265 C20.208862,9.796265 17.77832,9.796265 17.77832,9.796265 C17.77832,9.796265 17.702026,9.796265 17.702026,9.796265 C17.702026,9.796265 17.702637,9.720215 17.702637,9.720215 C17.702637,9.720215 17.716553,7.9040527 17.716553,7.9040527 C17.716553,7.9040527 17.717041,7.834717 17.717041,7.834717 C17.717041,7.834717 17.79309,7.834717 17.79309,7.834717 C17.79309,7.834717 20.223755,7.834717 20.223755,7.834717 C20.223755,7.834717 20.242432,5.397461 20.242432,5.397461 C20.242432,5.397461 20.24292,5.328369 20.24292,5.328369 C20.24292,5.328369 20.311523,5.328369 20.311523,5.328369 C20.311523,5.328369 22.135132,5.328369 22.135132,5.328369 C22.135132,5.328369 22.203857,5.328369 22.203857,5.328369 C22.203857,5.328369 22.20337,5.397461 22.20337,5.397461 C22.20337,5.397461 22.18457,7.834717 22.18457,7.834717 C22.18457,7.834717 24.6156,7.834717 24.6156,7.834717 C24.6156,7.834717 24.691406,7.834717 24.691406,7.834717 C24.691406,7.834717 24.690796,7.9040527 24.690796,7.9040527 C24.690796,7.9040527 24.67688,9.720215 24.67688,9.720215 C24.67688,9.720215 24.676392,9.796265 24.676392,9.796265 C24.676392,9.796265 24.60083,9.796265 24.60083,9.796265 C24.60083,9.796265 22.170166,9.796265 22.170166,9.796265 C22.170166,9.796265 22.15149,12.226807 22.15149,12.226807 C22.15149,12.226807 22.151001,12.296265 22.151001,12.296265 C22.151001,12.296265 22.08191,12.296265 22.08191,12.296265 Z"/>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog-details__comments">
+            <h5 class="blog-details__comments-title">
+              3 Comments
+            </h5>
+            <div class="blog-details__comment">
+              <img class="blog-details__comment-img" src="images/blog/comment_1.jpg" alt="">
+              <div class="blog-details__comment-content">
+                <div class="blog-details__comment-info">
+                  <h6 class="blog-details__comment-name">
+                    Delores G. Roberts
+                  </h6>
+                  <div class="blog-details__comment-date">
+                    Add 11 Oct 2020
+                  </div>
+                </div>
+                <p class="blog-details__comment-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
+                </p>
+                <a class="blog-details__comment-link" href="#">Reply</a>
+              </div>
+            </div>
+            <div class="blog-details__comment blog-details__comment--answer">
+              <img class="blog-details__comment-img" src="images/blog/comment_2.jpg" alt="">
+              <div class="blog-details__comment-content">
+                <div class="blog-details__comment-info">
+                  <h6 class="blog-details__comment-name">
+                    Delores G. Roberts
+                  </h6>
+                  <div class="blog-details__comment-date">
+                    Add 11 Oct 2020
+                  </div>
+                </div>
+                <p class="blog-details__comment-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
+                </p>
+                <a class="blog-details__comment-link" href="#">Reply</a>
+              </div>
+            </div>
+            <div class="blog-details__comment">
+              <img class="blog-details__comment-img" src="images/blog/comment_3.jpg" alt="">
+              <div class="blog-details__comment-content">
+                <div class="blog-details__comment-info">
+                  <h6 class="blog-details__comment-name">
+                    Delores G. Roberts
+                  </h6>
+                  <div class="blog-details__comment-date">
+                    Add 11 Oct 2020
+                  </div>
+                </div>
+                <p class="blog-details__comment-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
+                </p>
+                <a class="blog-details__comment-link" href="#">Reply</a>
+              </div>
+            </div>
+          </div>
+          <form class="blog-details__form" action="#">
+            <h5 class="blog-details__form-title">
+              Leave A Comment
+            </h5>
+            <div class="blog-details__form-inputs">
+              <div class="blog-details__form-inputbox">
+                <input class="blog-details__form-input" type="text" placeholder="Name">
+              </div>
+              <div class="blog-details__form-inputbox">
+                <input class="blog-details__form-input" type="email" placeholder="youremail@gmail.com">
+              </div>
+            </div>
+            <div class="blog-details__form-textareabox">
+              <textarea class="blog-details__form-textarea" placeholder="Comment"></textarea>
+            </div>
+            <button class="blog-details__form-btn">Post Comment</button>
+          </form>
+        </div>
+        <aside class="news-aside blog-details__aside">
+          <form class="filter-search__form news-aside__search" action="#">
+            <input class="filter-search__input" type="text">
+            <button class="filter-search__btn" type="submit"></button>
+          </form>
+          <div class="filter-category filter__item">
+            <h5 class="filter__item-title">
+              CATEGORY
+            </h5>
+            <form class="filter-category__form" action="#">
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Chair</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Table</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Lamp</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Watch</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Clock</span>
+                </div>
+              </label>
+            </form>
+          </div>
+          <div class="filter-recent">
+            <h5 class="filter__item-title">
+              Recent Posts
+            </h5>
+            <div class="filter-recent__inner">
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_1.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_2.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_3.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_4.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="partners-slider partners-slider--modal">
+    <div class="container-small">
+      <div class="partners-slider__wrapper">
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_1.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_2.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_3.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_4.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_5.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_1.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_2.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_3.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_4.png" alt="partner-logo">
+        </div>
+        <div class="partners-slider__item">
+          <img class="partners-slider__img" src="images/blog/partners/partner_5.png" alt="partner-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container-small">
+    <div class="footer-top">
+      <div class="footer-info">
+        <a class="logo footer-info__logo" href="#">
+          <img class="logo__img" src="images/logo.png" alt="logo">
+        </a>
+        <ul class="footer-info__list">
+          <li class="footer-info__item">
+            <address class="footer-info__address">
+              ADDRESS: 4772 Wines Lane
+              Houston, TX 77032
+            </address>    
+          </li>
+          <li class="footer-info__item">
+            <a class="footer-info__phone" href="tel:8323475843">
+              Telephone: +832-347-5843
+            </a>
+          </li>
+          <li class="footer-info__item">
+            <a class="footer-info__email" href="#">
+              Email: contact@Glee.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-top__block">
+        <h6 class="footer-top__title">
+          Services
+        </h6>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">About us</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Return Policy</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Our Blog</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Contact Us</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Terms & Condition</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-top__block">
+        <h6 class="footer-top__title">
+          Account
+        </h6>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Your Account</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Checkout</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Login</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h6 class="footer-top__title footer-newsletter__title">
+          newsletter
+        </h6>
+        <p class="footer-newsletter__text">
+          Subscribe by our newsletter and get update protidin.
+        </p>
+        <form class="footer-newsletter__form" action="#">
+          <input type="email" class="footer-newsletter__input" required placeholder="Email address">
+          <button class="footer-newsletter__btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="footer-copy__text">
+        ©2020 CopyRight Example. All rights reserved.
+      </p>
+      <ul class="footer-copy__nav">
+        <li class="footer-copy__item">
+          <a class="footer-copy__link" href="#">Home</a>
+        </li>
+        <li class="footer-copy__item">
+          <a class="footer-copy__link" href="#">About</a>
+        </li>
+        <li class="footer-copy__item">
+          <a class="footer-copy__link" href="#">Blog</a>
+        </li>
+        <li class="footer-copy__item">
+          <a class="footer-copy__link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

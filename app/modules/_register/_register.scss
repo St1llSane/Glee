@@ -1,0 +1,85 @@
+.modal{
+  max-width: 485px;
+  padding: 0 15px;
+  margin: 0 auto;
+  padding: 120px 0;
+  &__form{
+    margin-bottom: 30px;
+  }
+  &__label{
+    color: $second;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__input,
+  &__btn{
+    height: 60px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px 0 20px;
+    border: 2px solid #f6f6f6;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    &:focus{
+      border-color: $icon-grey;
+    }
+  }
+  &__btn{
+    margin-top: 38px;
+    @extend %form-btn;
+    border: none;
+    color: #fffefe;
+    background-color: $icon-grey;
+    transition: background-color .2s;
+    margin-bottom: 30px;
+    &:hover{
+      background-color: #b8d1df;
+    }
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    position: relative;
+    &::after{
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #f6f6f6;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__link{
+    color: $second;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+  }
+  &__register{
+    text-align: center;
+  }
+  &__text{
+    color: $second;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  &__create{
+    @extend %form-btn;
+    color: $primary;
+    text-decoration: none;
+    padding: 15px 0;
+    border: 2px solid $icon-grey;
+    transition: background-color .2s;
+    &:hover{
+      background-color: $icon-grey;
+    }
+  }
+}

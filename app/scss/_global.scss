@@ -61,7 +61,32 @@ main{
   font-size: 36px;
   line-height: 46px;
 }
-
+.partners-slider{
+  background-color: $bg;
+  padding: 270px 0 90px;
+  width: 100%;
+  margin-top: -170px;
+  bottom: -8px;
+  &--modal{
+    padding: 75px 0;
+    margin-top: 0;
+  }
+  &__wrapper{
+    justify-content: center;
+  }
+  &__item{
+    width: unset !important;
+  }
+  .slick-track{
+    display: flex;
+    align-items: center;
+  }
+  .slick-slide{
+    outline: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 .top{
   background-color: $grey-light;
   text-align: center;

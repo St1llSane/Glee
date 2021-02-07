@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/blog.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+{% include 'app/modules/_header/_header.html' %}
+
+<main>
+  <section class="top">
+    <div class="top__inner">
+      <h2 class="top__title">
+        Blog
+      </h2>
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Home 
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">
+              Blog
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="news">
+    <div class="container-small">
+      <div class="news__inner">
+        <div class="news__wrapper">
+          <div class="news__item">
+            <a class="news__item-image" href="#">
+              <img class="news__item-img" src="images/blog/news_1.jpg" alt="">
+            </a>
+            <div class="blog__item-content-about news__item-info">
+              <time class="blog__item-content-time news__item-date">
+                28 JANUARY, 2020
+              </time>
+              <a class="blog__item-content-autor news__item-auto" href="#">
+                BY ADMIN
+              </a>
+            </div>
+            <div class="news__item-content">
+              <h3 class="news__item-title">
+                <a class="news__item-titlelink" href="#">
+                  Fonsectetur adipisicing  eiusmod
+                </a>
+              </h3>
+              <p class="news__item-text">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              </p>
+              <a class="news__item-link" href="#">
+                View More
+              </a>
+            </div>
+          </div>
+          <div class="news__item">
+            <a class="news__item-image" href="#">
+              <img class="news__item-img" src="images/blog/news_2.jpg" alt="">
+            </a>
+            <div class="blog__item-content-about news__item-info">
+              <time class="blog__item-content-time news__item-date">
+                28 JANUARY, 2020
+              </time>
+              <a class="blog__item-content-autor news__item-auto" href="#">
+                BY ADMIN
+              </a>
+            </div>
+            <div class="news__item-content">
+              <h3 class="news__item-title">
+                <a class="news__item-titlelink" href="#">
+                  Fonsectetur adipisicing  eiusmod
+                </a>
+              </h3>
+              <p class="news__item-text">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              </p>
+              <a class="news__item-link" href="#">
+                View More
+              </a>
+            </div>
+          </div>
+          <div class="news__item">
+            <a class="news__item-image" href="#">
+              <img class="news__item-img" src="images/blog/news_3.jpg" alt="">
+            </a>
+            <div class="blog__item-content-about news__item-info">
+              <time class="blog__item-content-time news__item-date">
+                28 JANUARY, 2020
+              </time>
+              <a class="blog__item-content-autor news__item-auto" href="#">
+                BY ADMIN
+              </a>
+            </div>
+            <div class="news__item-content">
+              <h3 class="news__item-title">
+                <a class="news__item-titlelink" href="#">
+                  Fonsectetur adipisicing  eiusmod
+                </a>
+              </h3>
+              <p class="news__item-text">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              </p>
+              <a class="news__item-link" href="#">
+                View More
+              </a>
+            </div>
+          </div>
+          <div class="news__item">
+            <a class="news__item-image" href="#">
+              <img class="news__item-img" src="images/blog/news_4.jpg" alt="">
+            </a>
+            <div class="blog__item-content-about news__item-info">
+              <time class="blog__item-content-time news__item-date">
+                28 JANUARY, 2020
+              </time>
+              <a class="blog__item-content-autor news__item-auto" href="#">
+                BY ADMIN
+              </a>
+            </div>
+            <div class="news__item-content">
+              <h3 class="news__item-title">
+                <a class="news__item-titlelink" href="#">
+                  Fonsectetur adipisicing  eiusmod
+                </a>
+              </h3>
+              <p class="news__item-text">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              </p>
+              <a class="news__item-link" href="#">
+                View More
+              </a>
+            </div>
+          </div>
+          <div class="pagination news__pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <span class="pagination__link pagination__link--active">1</span>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+            </ul>
+            <a class="pagination__right pagination__arrow" href="#">Next</a>
+          </div>
+        </div>
+        <aside class="news-aside">
+          <form class="filter-search__form news-aside__search" action="#">
+            <input class="filter-search__input" type="text">
+            <button class="filter-search__btn" type="submit"></button>
+          </form>
+          <div class="filter-category filter__item">
+            <h5 class="filter__item-title">
+              CATEGORY
+            </h5>
+            <form class="filter-category__form" action="#">
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Chair</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Table</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Lamp</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Watch</span>
+                </div>
+              </label>
+              <label class="filter-category__label">
+                <input class="filter-category__input" type="checkbox">
+                <div class="filter-category__checkbox">
+                  <span>Clock</span>
+                </div>
+              </label>
+            </form>
+          </div>
+          <div class="filter-recent">
+            <h5 class="filter__item-title">
+              Recent Posts
+            </h5>
+            <div class="filter-recent__inner">
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_1.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_2.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_3.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+              <a class="filter-recent__item" href="#">
+                <img class="filter-recent__img" src="images/blog/recent_4.jpg" alt="">
+                <div class="filter-recent__content">
+                  <h6 class="filter-recent__title">
+                    Corem ipsum dolor tetur adipisicing elit
+                  </h6>
+                  <div class="filter-recent__date">
+                    28 JANUARY, 2020
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+{% include 'app/modules/_footer/_footer.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/main.min.js"></script>
+</body>
+</html>
